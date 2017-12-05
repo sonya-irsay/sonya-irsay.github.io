@@ -1,0 +1,257 @@
+@font-face { font-family: ApercuPro; font-weight: medium; src: url('data/suisse-light.woff');}
+@font-face { font-family: ApercuPro; font-style: italic; src: url('data/suisse-light.woff');}
+@font-face { font-family: ApercuPro; font-weight: bold; src: url('data/suisse-light.woff');}
+@font-face { font-family: ApercuPro; font-weight: lighter; src: url('data/suisse-light.woff');}
+@font-face { font-family: Suisse Regular; font-weight: bold; src: url('data/suisse-regular.woff');}
+@font-face { font-family: Suisse Light; font-weight: lighter; src: url('data/suisse-light.woff');}
+
+body{
+  /*this will change the color to lightblue*/
+  /*margin = when it doesnt go all the way to the page*/
+
+  margin:0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  font-family: ApercuPro, sans-serif;
+  font-size: 2vw;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:400px; top:0px;}
+    50%  {background-color:blue; left:0px; top:0px;}
+    75%  {background-color:green; left:400px; top:0px;}
+    100% {background-color:red; left:0px; top:0px;}
+}
+
+/* Standard syntax */
+@keyframes example {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:400px; top:0px;}
+    50%  {background-color:blue; left:0px; top:0px;}
+    75%  {background-color:green; left:400px; top:0px;}
+    100% {background-color:red; left:0px; top:0px;}
+}
+
+/*text: header*/
+h1{
+  /*text-align: center;*/
+  /*margin-left: 30px;*/
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  font-family: Suisse Regular;
+  font-weight: lighter;
+  font-size: 6vw;
+  display:-webkit-box;
+  -webkit-box-align:center;
+  -webkit-box-pack:center;
+
+
+  /*-webkit-animation-name: example;
+  -webkit-animation-duration: 4s;
+  -webkit-animation-iteration-count: 3;
+  -webkit-animation-direction:reverse;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: 3;
+  animation-direction:reverse;
+  z-index: 1;*/
+}
+
+h3{
+  width: 100%;
+  height: 100%;
+  text-align: right;
+  font-family: ApercuPro;
+  font-weight: lighter;
+  font-size: 6vw;
+}
+
+h2{
+  /*float: center;*/
+  /*text-align: center;*/
+  margin: auto;
+  /*width: 40%;*/
+  max-width: 55%;
+  /*width: 100%;
+  height: 100%;*/
+  position: relative;
+  /*font-family: Suisse Regular;*/
+  /*font-weight: lighter;*/
+  /*font-size: 6vw;*/
+  display: block;
+  color: black;
+  text-align: left;
+  padding: 25px 0 0 0;
+  /*margin: auto;*/
+  text-decoration: none;
+  font-size: 1.8vw;
+  font-family: Suisse Regular, sans-serif;
+}
+
+h4{
+  float: left;
+  display: block;
+  margin: auto;
+  color: black;
+  text-align: center;
+  padding: 25px 0 0 46px;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: Suisse Regular, sans-serif;
+}
+
+.center{
+  text-align: center;
+  margin: 20px;
+}
+
+/*change navigation color*/
+.navigation{
+  /*background-color: lightblue;*/
+  overflow: hidden;
+}
+
+/*change style of links in nav only*/
+.navigation a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 25px 46px;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: Suisse Regular, sans-serif;
+  /*font-family: helvetica, sans-serif;*/
+  /*font-style: oblique;*/
+}
+
+/*change the style of name*/
+.name{
+  /*background: darkgrey;*/
+  /*this is important, ignore other rules (that are in a class higher on hierarchy scale)*/
+  /*font-style: normal !important;*/
+}
+
+/*when hover links*/
+.navigation a:hover{
+  background-color: yellow;
+  color: black;
+}
+
+div{
+  width: 100%;
+  text-align: center;
+}
+
+img{
+  width: 45%;
+}
+
+a{
+  color: black;
+  text-decoration: none;
+  /*text-decoration: line-through;*/
+  font-size: 0vw;
+  font-family: Suisse Regular;
+  font-weight: lighter;
+}
+
+ul{
+  width:100;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+img{
+  width: 100%;
+}
+
+.border{
+  border: 1px solid black;
+  margin: 0;
+  padding: 0;
+}
+
+ul li{
+  max-width: 30%;
+  /*border: 1px solid black;*/
+  /*fills the page + orders*/
+  display: inline-block;
+  /*top right bottom left*/
+  margin: 0 15px 22px 15px;
+  /*the margin is relative to its position*/
+  /*text-align: center;
+  font-size: 14px;*/
+  position: relative;
+  /*look up vertical align = other options*/
+  vertical-align: top;
+}
+
+ul li.singlework{
+  margin: auto;
+  /*width: 40%;*/
+  max-width: 55%;
+  /*border: 1px solid black;*/
+  /*fills the page + orders*/
+  display: block;
+  /*top right bottom left*/
+  padding: 0 0 25px 0;
+  /*margin: 0 15px 22px 15px;*/
+  /*the margin is relative to its position*/
+  /*text-align: center;
+  font-size: 14px;*/
+  position: relative;
+  /*look up vertical align = other options*/
+  vertical-align: top;
+}
+
+ul li img{
+  /*border: 1px solid black;*/
+  opacity: 0;
+}
+
+ul li img.nohover{
+  /*border: 1px solid black;*/
+  opacity: 1;
+}
+
+ul li img:hover{
+  /*border: 1px solid black;*/
+  opacity: 1;
+}
+
+ul li p{
+  /*border: 1px solid black;*/
+  vertical-align: top;
+  text-align: left;
+  margin:10px 0 0 0;
+  font-size: 20px;
+}
+
+#link{
+    text-decoration: none;
+}
+
+/*#workimg{
+  display: none;
+}*/
+
+/*# is used for an id + name of the id*/
+/*#green{
+  width: 30%;
+  height: 30%;
+  position: absolute;
+  background-color: green;
+}*/
+/*. is used for a class + name of the class*/
+/*.blue{
+  width: 70%;
+  height: 70%;
+  position: absolute;
+  background-color: blue;
+}*/

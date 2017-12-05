@@ -1,55 +1,39 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Sanie Irsay Artist Statment</title>
+  <head>
+    <!--this is how to add css files to html-->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title> Sanie Irsay </title>
+  </head>
 
-	<script src="https://use.typekit.net/ylt1bqp.js"></script>
-	<script>try{Typekit.load({ async: true });}catch(e){}</script>
-
-	<style type="text/css">
-		body {
-			text-align: center;
-			background: #EEE;
-			color: #222;
-		}
-		.bg {
-		    display: block;
-		    position: absolute;
-		    width: 100%;
-		    height: 100%;
-				background: #FFF;
-		}
-		.wrap {
-			display: table;
-			width: 80%;
-			/*padding: 50px;*/
-			margin: 100px auto;
-			background: #FFF;
-			text-align: center;
-		}
-		#title {
-			font-size: 100px;
-			font-weight: bold;
-			text-transform: uppercase;
-			line-height: .9em;
-
-		}
-		#subtitle {
-			margin-top: .75em;
-			font-size: 75px;
-			font-weight: normal;
-		}
-	</style>
-
-</head>
 <body>
-	<div class="bg">
-		<div class="wrap">
-			<div id="title" class="tk-futura-pt">Title</div>
-			<!-- <div id="subtitle" class="tk-futura-pt">Subtitle</div> -->
-		</div>
-	</div>
-	<script	type="text/javascript" src="underscore.js"></script>
-	<script type="text/javascript" src="title.js"></script>
+<!-- NAVIGATION -->
+  <div class="navigation">
+  <!-- REMEMBER TO CHANGE NAMES/URL IN ALL FILES -->
+    <a class="name" href="index.html">Sanie Irsay</a>
+    <!-- <a href="index.html">Home</a> -->
+    <a href="contact.html">Contact</a>
+  </div>
+
+<!-- WORK -->
+  <div class="list">
+    <ul style="list-style-type:none">
+      <li><a href="page2.html"><div class="border"><img src="imgs/01_mistaek_magazine.jpg"></div><p>Mistaek Magazine</p></a></li>
+      <li><a href="page3.html"><div class="border"><img src="imgs/02_fields_sketchbook.jpg"></div><p>Field Sketches</p></a></li>
+      <li><a href="page2.html"><div class="border"><img src="imgs/03_silkscreen_river.jpg"></div><p>Of the River</p></a></li>
+      <li><a href="page2.html"><div class="border"><img src="imgs/04_painting.jpg"></div><p>Fields</p></a></li>
+      <li><a href="page2.html"><div class="border"><img src="imgs/5.jpg"></div><p>Sketchbooks</p></a></li>
+      <li><a href="page2.html"><div class="border"><img src="imgs/6.jpg"></div><p>Just</p></a></li>
+    </ul>
+  </div>
+
+<!-- OTHER -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/script.js"></script>
+
 </body>
+
+<footer>
+</footer>
+
 </html>
