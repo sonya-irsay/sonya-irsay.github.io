@@ -135,32 +135,18 @@ h4{
   /*background: darkgrey;*/
   /*this is important, ignore other rules (that are in a class higher on hierarchy scale)*/
   /*font-style: normal !important;*/
-  border: 1px solid black;
+  /*border: 1px solid black;
   margin: 0;
   padding: 0;
-  opacity: 0;
+  opacity: 0;*/
 }
 
-.name:hover{
+/*.name:hover{
   border: 1px solid black;
   margin: 0;
   padding: 0;
   opacity: 1;
-}
-
-.bordername{
-  border: 1px solid black;
-  margin: 0;
-  padding: 0;
-  opacity: 0;
-}
-
-.bordername:hover{
-  border: 1px solid black;
-  margin: 0;
-  padding: 0;
-  opacity: 1;
-}
+}*/
 
 /*when hover links*/
 .navigation a:hover{
