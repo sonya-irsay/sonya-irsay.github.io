@@ -48,7 +48,7 @@ h6{
   font-family: Suisse Regular, sans-serif;
 }
 
-h1{
+h4{
   float: left;
   display: block;
   margin: auto;
@@ -139,3 +139,22 @@ ul li p{
 #link{
     text-decoration: none;
 }
+
+/*#workimg{
+  display: none;
+}*/
+
+/*# is used for an id + name of the id*/
+/*#green{
+  width: 30%;
+  height: 30%;
+  position: absolute;
+  background-color: green;
+}*/
+/*. is used for a class + name of the class*/
+/*.blue{
+  width: 70%;
+  height: 70%;
+  position: absolute;
+  background-color: blue;
+}*/
