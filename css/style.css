@@ -1,13 +1,19 @@
-@font-face { font-family: ApercuPro; font-weight: medium; src: url('data/suisse-light.woff');}
+/* @font-face { font-family: ApercuPro; font-weight: medium; src: url('data/suisse-light.woff');}
 @font-face { font-family: ApercuPro; font-style: italic; src: url('data/suisse-light.woff');}
 @font-face { font-family: ApercuPro; font-weight: bold; src: url('data/suisse-light.woff');}
-@font-face { font-family: ApercuPro; font-weight: lighter; src: url('data/suisse-light.woff');}
+@font-face { font-family: ApercuPro; font-weight: lighter; src: url('data/suisse-light.woff');} */
 @font-face { font-family: Suisse Regular; font-weight: bold; src: url('data/suisse-regular.woff');}
-@font-face { font-family: Suisse Light; font-weight: lighter; src: url('data/suisse-light.woff');}
+@font-face { font-family: Suisse Regular-Italic; font-weight: bold; src: url('data/suisse-regular-italic.woff');}
+@font-face { font-family: Suisse Light; font-weight: lighter; src: url('data/suisse-light-new.woff');}
+@font-face { font-family: Suisse Light-Italic; font-weight: lighter; src: url('data/suisse-light-italic.woff');}
+@font-face { font-family: Suisse; font-weight: medium; src: url('data/SuisseIntl-SemiBold.otf');}
+/* @font-face { font-family: EuclidFlex; font-weight: bold; src: url('data/euclidflex-bold-webtrial.woff');} */
 
 body{
   margin:0;
   margin-top: 100px;
+  position: relative;
+  padding-bottom: 2em;
   width: 100%;
   height: 100%;
   background-color: #ffffff;
@@ -20,6 +26,8 @@ body{
   margin: 20px;
 }
 
+/* NAVIGATION */
+/* --------------------------------------------------------------------- */
 .navigation{
   background-color: white;
   overflow: hidden;
@@ -38,8 +46,179 @@ body{
   text-decoration: none;
   font-size: 18px;
   font-family: Suisse Regular, sans-serif;
+  outline: none;
 }
 
+.navigation a:hover{
+  background-color: yellow;
+  color: black;
+  outline: none;
+}
+/* --------------------------------------------------------------------- */
+
+/* BOTTOM NAVIGATION */
+/* --------------------------------------------------------------------- */
+.bottomnav{
+  background-color: white;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+
+.bottomnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 0 46px 25px 46px;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: Suisse Regular, sans-serif;
+}
+
+.bottomnav a:hover{
+  color: black;
+}
+
+.bottomnav button{
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 0 46px 25px 46px;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: Suisse Regular, sans-serif;
+  border: none;
+  cursor: pointer;
+  background-color: inherit;
+  outline: inherit;
+}
+/* --------------------------------------------------------------------- */
+
+/* FLOAT */
+/* --------------------------------------------------------------------- */
+.column {
+    float: left;
+    padding: 10px 10px 0px 10px;
+}
+
+/* Left and right column */
+.column.side {
+    width: 20%;
+    padding-left: 46px; /* get rid of this if you want the padding: 0 0 0 1.8vw;, responsive in h  */
+}
+
+/* Middle column */
+.column.middle {
+    /* padding:0; */
+    width: 60%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.container{
+  margin-top:0;
+  /* position:fixed; */
+}
+
+@media (max-width: 600px) {
+    .column.side, .column.middle {
+        width: 100%;
+        padding: 10px 46px 0px 46px;
+    }
+    h3{
+      padding: 0 0 0 0;
+    }
+    h4{
+      padding: 0 0 0 0;
+    }
+}
+/* --------------------------------------------------------------------- */
+
+/* FOR CV */
+/* --------------------------------------------------------------------- */
+table, td, th {
+    /* border: 1px solid black; */
+    /* margin-top:0; */
+    /* display: block; */
+    color: black;
+    text-align: left;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: Suisse Light, sans-serif;
+    font-weight: lighter;
+    overflow: hidden;
+}
+
+table {
+    border-collapse: collapse;
+    /* width: 100%; */
+    overflow: hidden;
+}
+
+td {
+    /* height: 50px; */
+    padding: 0 20px 0 0;
+    vertical-align: top;
+}
+/* --------------------------------------------------------------------- */
+
+/* HOVER */
+/* --------------------------------------------------------------------- */
+.cv{
+  float: left;
+  padding: 10px 10px 0px 46px;
+}
+
+.cv a {
+  margin-top:0;
+  display: block;
+  color: black;
+  text-align: left;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: Suisse Regular, sans-serif;
+  font-weight: lighter;
+}
+
+.cv p{
+  position: relative;
+  z-index: 3;
+}
+
+.cv p:hover{
+  position: relative;
+  /* z-index: 3; */
+}
+
+.cv a:hover img{
+  display: inline;
+  position: absolute;
+  left:0;
+  z-index:-1;
+  opacity: 1;
+}
+
+.cv a:hover {
+  /* color: blue; */
+}
+
+.cv img{
+  display:none;
+  z-index:-1;
+}
+
+/* --------------------------------------------------------------------- */
+
+
+/* TYPE */
+/* --------------------------------------------------------------------- */
 h6{
   display: block;
   color: black;
@@ -60,9 +239,84 @@ h1{
   font-family: Suisse Regular, sans-serif;
 }
 
-.navigation a:hover{
-  background-color: yellow;
+h2{
+  /*float: center;*/
+  /*text-align: center;*/
+  margin: auto;
+  /*width: 40%;*/
+  max-width: 55%;
+  /*width: 100%;
+  height: 100%;*/
+  position: relative;
+  /*font-family: Suisse Regular;*/
+  /*font-weight: lighter;*/
+  /*font-size: 6vw;*/
+  display: block;
   color: black;
+  text-align: left;
+  padding: 25px 0 0 0;
+  /*margin: auto;*/
+  text-decoration: none;
+  font-size: 1.8vw;
+  font-family: Suisse Regular, sans-serif;
+}
+
+/* for descriptions */
+h3{
+  /*float: center;*/
+  /*text-align: center;*/
+  /* margin-left: 50px; */
+  margin-top:0;
+  /* margin-top: 25px; */
+  /* width: 15%; */
+  /* max-width: 55%; */
+  /*width: 100%;
+  height: 100%;*/
+  /* position: fixed; */
+  /*font-family: Suisse Regular;*/
+  /*font-weight: lighter;*/
+  /*font-size: 6vw;*/
+  display: block;
+  color: black;
+  text-align: left;
+  /* padding: 0 0 0 1.8vw; */
+  /*margin: auto;*/
+  text-decoration: none;
+  font-size: 18px;
+  font-family: Suisse Light, sans-serif;
+  font-weight: lighter;
+}
+
+/* for material (italic) */
+h5{
+  margin-top:0;
+  display: block;
+  color: black;
+  text-align: left;
+  /* padding: 0 0 0 1.8vw; */
+  text-decoration: none;
+  font-size: 18px;
+  font-family: Suisse Light-Italic, sans-serif;
+  font-weight: lighter;
+}
+
+/* main (titles + NAVIGATION) */
+h4{
+  margin-top:0;
+  display: block;
+  color: black;
+  text-align: left;
+  /* padding: 0 0 0 1.8vw; */
+  text-decoration: none;
+  font-size: 18px;
+  font-family: Suisse Regular, sans-serif;
+  font-weight: bold;
+}
+/* --------------------------------------------------------------------- */
+
+#header-content {
+  position: absolute;
+  bottom: 0;
 }
 
 div{
@@ -86,6 +340,7 @@ a{
 ul{
   width:100;
   margin-left: 0;
+  margin:0;
   padding-left: 0;
 }
 
@@ -109,7 +364,7 @@ ul li{
 
 ul li.singlework{
   margin: auto;
-  max-width: 55%;
+  max-width: 100%;
   display: block;
   padding: 0 0 25px 0;
   position: relative;
@@ -139,3 +394,37 @@ ul li p{
 #link{
     text-decoration: none;
 }
+
+::-moz-selection { /* Code for Firefox */
+    color: black;
+    background: yellow;
+}
+
+::selection {
+    color: black;
+    background: yellow;
+}
+
+ /* ----------------------------------------------------------------- */
+.footer {
+  background-color: white;
+  width: 100%;
+  height: 2em;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.footer p {
+  margin-top:0;
+  display: block;
+  color: black;
+  text-align: left;
+  /* padding: 0 0 0 1.8vw; */
+  padding: 25px 46px;
+  text-decoration: none;
+  font-size: 12px;
+  font-family: Suisse Regular, sans-serif;
+  font-weight: bold;
+}
+ /* ----------------------------------------------------------------- */
