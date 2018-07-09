@@ -428,7 +428,7 @@ ul li p{
     }
 }
 
-@media only screen and (min-width : 375px) and (max-width : 667px){
+@media only screen and (min-width : 280px) and (max-width : 667px){
 
   .column.side, .column.middle {
       width: 90%;
@@ -471,6 +471,10 @@ ul li p{
     margin: 1vw 0 0 0;
     font-size: 5vw;
   }
+
+  /* ul li img{
+    opacity: 1;
+  } */
 
   .navigation a {
     float: left;
