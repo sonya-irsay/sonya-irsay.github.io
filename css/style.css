@@ -154,6 +154,11 @@ td {
     padding: 0 20px 0 0;
     vertical-align: top;
 }
+
+.contact{
+    overflow-x:hidden;
+    margin: 10px 10px 0px 46px;
+}
 /* --------------------------------------------------------------------- */
 
 /* HOVER */
@@ -527,6 +532,26 @@ ul li p{
   body{
     margin-top: 19.6vw;
   }
+
+/* CONTACT */
+/* ------------------------------- */
+  .contact{
+      overflow-x:hidden;
+      margin: 5.8vw;
+  }
+
+  h4{
+    margin:3.8vw 0 3.8vw 0;
+    display: block;
+    color: black;
+    text-align: left;
+    /* padding: 0 0 0 0; */
+    text-decoration: none;
+    font-size: 18px;
+    font-family: Suisse Regular, sans-serif;
+    font-weight: bold;
+  }
+
 }
 
  /* ----------------------------------------------------------------- */
