@@ -159,6 +159,18 @@ td {
     overflow-x:hidden;
     margin: 10px 10px 0px 46px;
 }
+
+.contact a {
+  color: black;
+  text-align: left;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: Suisse Light, sans-serif;
+  font-weight: lighter;
+  overflow: hidden;
+  padding: 0 20px 0 0;
+  vertical-align: top;
+}
 /* --------------------------------------------------------------------- */
 
 /* HOVER */
@@ -477,9 +489,15 @@ ul li p{
     font-size: 5vw;
   }
 
-  /* ul li img{
+  ul li img{
     opacity: 1;
-  } */
+  }
+
+  .border{
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
 
   .navigation a {
     float: left;
