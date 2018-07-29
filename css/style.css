@@ -1,7 +1,7 @@
 @font-face { font-family: Suisse Regular; font-weight: bold; src: url('data/suisse-regular.woff');}
 @font-face { font-family: Suisse Regular-Italic; font-weight: bold; src: url('data/suisse-regular-italic.woff');}
 @font-face { font-family: Suisse Light; font-weight: lighter; src: url('data/suisse-light-new.woff');}
-@font-face { font-family: Suisse Light-Italic; font-weight: lighter; src: url('data/suisse-light-italic.woff');}
+@font-face { font-family: Suisse Light; font-weight: lighter; font-style: italic; src: url('data/suisse-light-italic.woff');}
 @font-face { font-family: Suisse; font-weight: medium; src: url('data/SuisseIntl-SemiBold.otf');}
 
 body{
@@ -313,8 +313,9 @@ h5{
   /* padding: 0 0 0 1.8vw; */
   text-decoration: none;
   font-size: 18px;
-  font-family: Suisse Light-Italic, sans-serif;
+  font-family: Suisse Light, sans-serif;
   font-weight: lighter;
+  font-style: italic;
 }
 
 /* main (titles + NAVIGATION) */
@@ -331,7 +332,7 @@ h4{
 }
 
 em {
-   font-family: Suisse Light-Italic, sans-serif;
+   font-family: Suisse Light, sans-serif;
    font-weight: lighter;
    font-style: italic;
 }
