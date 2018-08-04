@@ -45,7 +45,7 @@ body{
 }
 
 .navigation a:hover{
-  background-color: #d2d2d2;
+  background-color: yellow;
   color: black;
   outline: none;
 }
@@ -374,35 +374,8 @@ img{
 }
 
 .border{
-  border: 1px solid black;
-  margin: 0;
-  padding: 0;
-}
-
-.border4{
-  /* yellow */
-  background-color: #f4c20d;
-  margin: 0;
-  padding: 0;
-}
-
-.border1{
-  /* green */
-  background-color: #3cba54;
-  margin: 0;
-  padding: 0;
-}
-
-.border2{
-  /* red */
-  background-color: #db3236;
-  margin: 0;
-  padding: 0;
-}
-
-.border3{
-  /* blue */
-  background-color: #4885ed;
+  /* border: 1px solid black; */
+  background-color: #d2d2d2;
   margin: 0;
   padding: 0;
 }
@@ -450,12 +423,12 @@ ul li p{
 
 ::-moz-selection { /* Code for Firefox */
     color: black;
-    background: #f4c20d;
+    background: yellow;
 }
 
 ::selection {
     color: black;
-    background: #f4c20d;
+    background: yellow;
 }
 
 /* RESPONSIVE */
