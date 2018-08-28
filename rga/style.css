@@ -330,6 +330,25 @@ h3 a:hover{
   text-decoration: underline;
 }
 
+p3{
+  display: block;
+  color: black;
+  text-align: left;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: Suisse Light, sans-serif;
+  font-weight: lighter;
+}
+
+p3 a{
+  color: black;
+  text-align: left;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: Suisse Light, sans-serif;
+  font-weight: lighter;
+}
+
 /* for material (italic) */
 h5{
   margin-top:0;
@@ -490,9 +509,62 @@ ul li p{
     h4{
       padding: 0 0 0 0;
     }
+    
+    /* FLEX */
+    /* -------------------------------------------- */
+    .flex-container {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .flex-container > .left {
+      width: 80%;
+      padding: 5.8vw 0 5.8vw 0;
+      margin: 0;
+      text-align: left;
+      flex-direction: column;
+    }
+
+    .flex-container > .right {
+      width: 80%;
+      height: inherit;
+      margin: 0;
+      /* padding: 0 5.8vw 0 5.8vw; */
+      flex-direction: column;
+    }
+    /* -------------------------------------------- */
 }
 
 @media only screen and (min-width : 280px) and (max-width : 667px){
+  /* FLEX */
+  /* -------------------------------------------- */
+  .flex-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .flex-container > .left {
+    width: 80%;
+    padding: 5.8vw 0 5.8vw 0;
+    margin: 0;
+    text-align: left;
+    flex-direction: column;
+  }
+
+  .flex-container > .right {
+    width: 80%;
+    height: inherit;
+    margin: 0;
+    /* padding: 0 5.8vw 0 5.8vw; */
+    flex-direction: column;
+  }
+  /* -------------------------------------------- */
 
   .column.side, .column.middle {
       width: 90%;
