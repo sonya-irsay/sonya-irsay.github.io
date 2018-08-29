@@ -44,6 +44,8 @@ body{
   outline: none;
 }
 
+.navigation a:last-child { float: right; }
+
 .navigation a:hover{
   background-color: yellow;
   color: black;
