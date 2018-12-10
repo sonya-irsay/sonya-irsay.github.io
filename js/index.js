@@ -124,7 +124,7 @@ function displayFontSize() {
     $('#laysan-dis').html(disciplines + " " + sInsert + "px");
 
     //Feed
-    $('#feed-1').html(title + " " + sInsert +"px");
+    // $('#feed-1').html(title + " " + sInsert +"px");
   }
 };
 
@@ -179,7 +179,7 @@ function toggleWireframe() {
       $('#laysan-dis').html('Identity, Logo, Print');
 
       //Feed
-      $('#feed-1').html('Silkscreen poster, 33 x 45 cm, edition of 20, 7 colors, on white, gray and cream Arches paper.');
+      // $('#feed-1').html('Silkscreen poster, 33 x 45 cm, edition of 20, 7 colors, on white, gray and cream Arches paper.');
   }
 
   console.log("wire toggled");
