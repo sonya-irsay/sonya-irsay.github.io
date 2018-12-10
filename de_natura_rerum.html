@@ -1,65 +1,295 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+
+  <!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link href="css/pace_minimal.css" rel="stylesheet" />
+  <script src="js/jquery.min.js"></script>
+  <script src="js/pace.js"></script>
+
   <meta name="description" content="Collaborative edition of Lucretius’ De Natura Rerum produced as part of You Are Here exhibition during the COP21 conference.">
   <meta name="keywords" content="Editorial, edition, publication, book, exhibition, COP21, enviornment, graphic, design, riso, print">
-  <script src="js/pace.js"></script>
-  <link href="css/pace_minimal.css" rel="stylesheet" />
-  <title> De Natura Rerum | Sanie Irsay </title>
-  <link rel="icon"
-    type="image/png"
-    href="imgs/favicon-01.png">
+  <title> Sanie Irsay – De Natura Rerum </title>
+
+  <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
 </head>
 
-<body style="background-color: white;">
+<body id="body" onload="load();">
   <!-- NAVIGATION -->
-    <div class="navigation">
-      <a href="index.html">Sanie Irsay</a>
-      <a href="contact.html">Contact</a>
+  <nav id="nav">
+    <ul>
+      <li><a class="name" href="index.html">Sanie Irsay</a></li>
+      <li><button class="infoButton" onclick="toggleInfo()">Info</button></li>
+      <li><a class="nav-top-shift" href="feed.html">Feed</a></li>
+      <li><button class="nav-top-shift wireframe-button" onclick="toggleWireframe()">Wireframe</button></li>
+    </ul>
+  </nav>
+
+
+  <div class="grid">
+    <!-- MARGINS -->
+    <div class="top-margin margin-hide"><p class="margin-number margin-number-offset"></p></div>
+
+    <div class="left-margin margin-hide"></div>
+    <div class="right-margin margin-hide"><p class="margin-number margin-number-offset"></p></div>
+
+    <!-- WORK -->
+    <!-- 1 -->
+    <div class="work-container">
+      <!-- IMAGES 1 -->
+      <div class="work-container-image">
+        <div class="single-img img-show"><img src="imgs/natura_rerum/1.jpg"></div>
+        <div class="single-img img-show"><img src="imgs/natura_rerum/8.jpg"></div>
+        <div class="single-img img-show"><img src="imgs/natura_rerum/2.jpg"></div>
+      </div> <!-- work container image -->
+
+      <!-- TEXT 1 -->
+      <div class="work-container-text">
+        <h4 id="natura">De Natura Rerum</h4>
+        <p id="natura-det" class="b">80 pages, Risograph print (3 colors) on white and fluo green stock, edition of 200.</p>
+        <p id="natura-des-1">Collaborative edition of Lucretius’ De Natura Rerum produced as part of You Are Here exhibition during the COP21 conference in Paris, France. The text was illustrated using only scanned images from found secondhand books.
+        </p>
+      </div> <!-- work container text -->
+    </div> <!-- work container  -->
+
+    <!-- 2 -->
+    <div class="work-container" style="grid-row-start: 3;">
+      <!-- IMAGES 2 -->
+      <div class="work-container-image">
+        <div class="single-img img-show"><img src="imgs/natura_rerum/6.jpg"></div>
+        <div class="single-img img-show"><img src="imgs/natura_rerum/7.jpg"></div>
+        <div class="single-img img-show"><img src="imgs/natura_rerum/9.jpg"></div>
+        <div class="single-img img-show" style="margin-bottom: 0;"><img src="imgs/natura_rerum/5.jpg"></div>
+      </div> <!-- work container image -->
+
+      <!-- TEXT 2-->
+      <div class="work-container-text">
+        <p id="natura-des-2">Project led by Aurélien Farina of <a href="http://papertiger.fr" target="_blank">Paper! Tiger!</a> </p>
+        <p id="natura-dis" class="b">Graphic, Editorial, Print
+        </p>
+      </div> <!-- work container text -->
+    </div> <!-- work container  -->
+
+    <div class="bottom-margin" style="grid-row-start: 4;">
+      <button class="to-top" onclick="topFunction()">Back to Top</button>
+      <a class="to-top" href="index.html">Next</a>
     </div>
 
-  <div class="row">
+  </div> <!-- grid -->
 
-    <div class="column side">
-      <div class="container">
-        <h4>De Natura Rerum</h4>
-        <h5>80 pages, Risograph print (3 colors) on white and fluo green stock, edition of 200.</h5>
-        <h3>Collaborative edition of Lucretius’ De Natura Rerum produced as part of You Are Here exhibition during the COP21 conference.
-        The text was illustrated using only scanned images from found secondhand books.</h3>
-        <h3>Collaborative project led by Aurélien Farina.
-        </h3>
-      </div>
-    </div>
+  <!-- CONTACT -->
+  <div id="info" class="contact-box transition">
+    <!-- /////////////////////////////// -->
+    <h4>Info</h4>
+    <p>Sanie Irsay is an artist, designer and creative coder working in New York, Paris and Toronto.
+      Say hello at <a class="contact" href="mailto:sanie@newschool.edu" target="_blank">sanie@newschool.edu</a> or <a class="contact" href="https://www.instagram.com/sanieirsay/" target="_blank">@sanieirsay</a>.
+    </p>
+    <!-- /////////////////////////////// -->
+    <h4>Education</h4>
+    <table>
+      <tr>
+        <td>2014 – 2018</td>
+        <td>
+          <em>Parsons Paris School of Design,</em> <a href="https://www.newschool.edu" target="_blank">The New School,</a> BFA Art, Media and Technology, France
+        </td>
+      </tr>
+      <tr>
+        <td>2010 – 2014</td>
+        <td><a href="https://www.instagram.com/esa_contemporary_art/" target="_blank"><em>Etobicoke School of the Arts,</em></a> Contemporary Art, Toronto, Canada</td>
+      </tr>
+    </table><br />
+    <!-- /////////////////////////////// -->
+    <h4>Work Experience</h4>
+    <table>
+      <tr>
+        <td>Present</td>
+        <td>
+          <em>Graphic Designer</em> at <a href="http://www.printplussign.ca" target="_blank">Print Plus Sign,</a> Remotely, Toronto, Canada
+        </td>
+      </tr>
+      <tr>
+        <td>2015 - 2018</td>
+        <td>
+          <em>Artist Assistant</em> to <a href="http://www.melocallaghan.com/works/" target="_blank">Mel O’Callaghan,</a> Paris, France
+        </td>
+      </tr>
+      <tr>
+        <td>2017 - 2018</td>
+        <td>
+          <em>Research Assistant</em> to artist <a href="http://www.recyclism.com" target="_blank">Benjamin Gaulon,</a> Paris, France
+        </td>
+      </tr>
+      <tr>
+        <td>2018</td>
+        <td>
+          <em>Freelance Graphic Design</em> for Insolent Games, Paris, France
+        </td>
+      </tr>
+      <tr>
+        <td>2016 & 2018</td>
+        <td>
+          <em>Co-organizer</em> of <a href="http://refrag.paris" target="_blank">ReFrag Festival,</a> annual symposium exploring new connections between art, culture and technology, Paris, France
+        </td>
+      </tr>
+      <tr>
+        <td>2015 - 2016</td>
+        <td>
+          <em>Program Assistant</em> for Technology Department at Parsons Paris, Paris, France
+        </td>
+      </tr>
+      <tr>
+        <td>2016</td>
+        <td>
+          <em>Camera Assistant</em> to artist <a href="https://www.palaisdetokyo.com/en/event/mel-o-callaghan" target="_blank">Mel O'Callaghan</a> in filming Dangerous-on-the-way, in Malaysia, Borneo. Exhibited at Palais de Tokyo, Paris, France
+        </td>
+      </tr>
+      <tr>
+        <td>2016</td>
+        <td>
+          <em>Full visual identity</em> and exhibition catalogue for :Principium, Le Hub Lafayette Anticipation Gallery, Paris, France
+        </td>
+      </tr>
+      <tr>
+        <td>2016</td>
+        <td>
+          <em>Coordinator</em> of 3-day long endurance performance for artist Mel O’Callaghan,
+  as part of the <a href="https://www.palaisdetokyo.com/en/event/do-disturb-0" target="_blank">DO DISTURB festival,</a> Palais de Tokyo, Paris, France
+        </td>
+      </tr>
+      <tr>
+        <td>2015</td>
+        <td>
+          <em>Contributing Artist</em> at <a href="https://www.mossandlam.com" target="_blank">Moss & Lam Artistic Services,</a> Toronto, Canada
+        </td>
+      </tr>
+      <tr>
+        <td>2015</td>
+        <td>
+          <em>Art Educator and Counsellor</em> at <a href="https://www.instagram.com/esa_contemporary_art/" target="_blank">ESA Art Camp,</a> Toronto, Canada
+        </td>
+      </tr>
+    </table><br />
+    <!-- /////////////////////////////// -->
+    <h4>Exhibitions</h4>
+    <table>
+      <tr>
+        <td>2018</td>
+        <td>
+          <em>Le Futur de la Création,</em> <a href="https://nuitdesmusees.culture.gouv.fr" target="_blank">La Nuit Européene des Musées,</a>
+          Mona Bismarck Center,
+          Paris, France
+        </td>
+      </tr>
+      <tr>
+        <td>2017</td>
+        <td><em>Merge,</em>
+            <a href="http://www.plateforme-paris.com" target="_blank">Platforme Gallery,</a>
+            Paris, France
+        </td>
+      </tr>
+      <tr>
+        <td>2015</td>
+        <td><em>NET WT, You Are Here</em>
+         exhibition & installation on campus during COP 21,
+        Paris, France
+        </td>
+      </tr>
+      <tr>
+        <td>2015</td>
+        <td><em>Point and Line to Plane,</em>
+        Parsons Paris Gallery,
+        Paris, France
+        </td>
+      </tr>
+      <tr>
+        <td>2015</td>
+        <td><em>De Natura Rerum,</em>
+        Parsons Paris Gallery, collaborative publication,
+        Paris, France
+        </td>
+      </tr>
+      <tr>
+        <td>2014</td>
+        <td><em>Memoryscapes,</em>
+        Parsons Paris Gallery, collaborative exhibition with
+        Maureen Muse,
+        Paris, France
+        </td>
+      </tr>
+      <tr>
+        <td>2014</td>
+        <td><em>Misplaced,</em> Etobicoke School of the Arts, Toronto, ON</td>
+      </tr>
+      <tr>
+        <td>2014</td>
+        <td><em>A Study in Action/Reaction,</em> <a href="https://www.albrightknox.org" target="_blank">Albright-Knox Art Gallery,</a> Buffalo, NY</td>
+      </tr>
+      <tr>
+        <td>2014</td>
+        <td><em>Scholastic Exhibition,</em>
+        Parsons The New School for Design,
+        Scholastic Art and Writing,
+        New York, NY
+        </td>
+      </tr>
+    </table><br />
+    <!-- /////////////////////////////// -->
+    <h4>Awards</h4>
+    <table>
+      <tr>
+        <td>2019</td>
+        <td>
+          <em>Communication Arts Magazine,</em> Typography Annual Award
+        </td>
+      </tr>
+      <tr>
+        <td>2014 – 2018</td>
+        <td>
+          <em>Full Tuition Scholarship,</em> Parsons, The New School, Paris & New York
+        </td>
+      </tr>
+      <tr>
+        <td>2014</td>
+        <td><em>Future New Gold Medal,</em> Scholastic Art and Writing Awards, New York</td>
+      </tr>
+      <tr>
+        <td>2013</td>
+        <td><em>First Place Recipient,</em> Canadian Young Artists Portrait Competition, Portrait Society of Canada, Toronto</td>
+      </tr>
+    </table>
+  </div>  <!-- end of contact -->
 
-    <div class="column middle">
-      <ul style="list-style-type:none">
-        <li class="singlework"><img class="nohover" src="imgs/natura_rerum/1.jpg" alt="two packaged copies of an A4 magazine with green and black cover"></li>
-        <li class="singlework"><img class="nohover" src="imgs/natura_rerum/8.jpg" alt="magazine with a green and black cover portraying a volcano eruption"></li>
-        <li class="singlework"><img class="nohover" src="imgs/natura_rerum/2.jpg" alt="hand flipping through a spread of a publication"></li>
-        <li class="singlework"><img class="nohover" src="imgs/natura_rerum/6.jpg" alt="magazine spread with excerpts from de natura rerum"></li>
-        <li class="singlework"><img class="nohover" src="imgs/natura_rerum/7.jpg" alt="magazine spread with excerpts from de natura rerum"></li>
-        <li class="singlework"><img class="nohover" src="imgs/natura_rerum/9.jpg" alt="magazine spread with excerpts from de natura rerum"></li>
-        <li class="singlework"><img class="nohover" src="imgs/natura_rerum/5.jpg" alt="detail of the magazine's binding"></li>
-      </ul>
-    </div>
-
+  <!-- BOTTOM NAV -->
+  <div class="bottom-nav">
+    <ul>
+      <li><a class="nav-bottom-shift" href="feed.html">Feed</a></li>
+      <li><button class="nav-bottom-shift wireframe-button" onclick="toggleWireframe()">Wireframe</button></li>
+    </ul>
   </div>
 
-  <div class="bottomnav">
-    <button onclick="topFunction()" title="Back to top">Back to top</button>
-    <!-- ////////////////////////////////////////////////////////////////////////CHANGE LINK -->
-    <span style="float:right;"><a href="field_sketchbook.html">Next</a></span>
-  </div>
-
-  <script src="js/jquery.min.js"></script>
-  <script src="js/script.js"></script>
-
+  <script src="js/index.js"></script>
 </body>
-
-<div class="footer">
-  <p>All work &copy; 2018 Sanie Irsay. All rights reserved.</p>
-</div>
 
 </html>
