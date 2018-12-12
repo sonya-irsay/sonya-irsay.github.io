@@ -11,11 +11,14 @@ var disciplines = "Disciplines — Suisse Light Italic"
 var lorem = "<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris viverra facilisis dolor, at laoreet enim interdum et. Sed et nulla at nibh cursus interdum a sit amet quam. Vivamus volutpat elit quis dictum porta. Sed efficitur, sapien at imperdiet pharetra, erat dui dictum mi, vel cursus neque dui ac lacus."
 var ipsum ="<br>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur vitae ipsum condimentum, rutrum urna vel, ultricies arcu. Donec egestas, justo eu venenatis volutpat, erat ligula porta urna, in sollicitudin eros nunc eu nibh. Mauris non libero varius, hendrerit tellus eget, tristique justo."
 
+var smoothX = 0;
+var smoothY = 0;
 // function: toggleInfo
 // the div: #info
 // showing class: show
 // the button: infoButton
 // the existing class: contact-box
+
 function toggleInfo() {
   $("#info").toggleClass("show");
   console.log("showing");
@@ -28,14 +31,97 @@ function toggleInfo() {
   }
 }
 
-// var misOne = document.getElementById("mis-1").getAttribute("src");
-// console.log("<img src=" + misOne + ">");
+//shows the caption on hover main image
+function mainHover() {
+
+  $('.main-image').hover(function(event) {
+    console.log("hovering");
+
+    //get source of the image
+    $('.main-image').mouseenter(function(event) {
+      var imgSrc = $(this).find("img").attr("src");
+      $(".showcase-title-hover").html(imgSrc);
+      console.log(imgSrc);
+    });
+
+    //get source of videos
+    $('.responsive-video').mouseenter(function(event) {
+      // var vidSrc = $(this).find("iframe").attr("src");
+      var vidSrc = "www.vimeo.com"
+      $(".showcase-title-hover").html(vidSrc);
+      console.log(vidSrc);
+    });
+
+    //show caption on mouse position
+    $('.main-image').mousemove(function(event) {
+        var x = event.pageX;
+        var y = event.pageY;
+
+        if ($('.main-image').hasClass('main-img-hide')){
+          $(".showcase-caption-hover").css({
+              "opacity": "1",
+              "left": x,
+              "top": y
+          });
+        }
+    });
+
+    $('.main-image').mouseleave(function(event) {
+      $(".showcase-caption-hover").css({
+          "opacity": "0"
+      });
+    });
+
+  });
+
+}
+
+//shows the caption on hover single image
+function singleHover() {
+
+  $('.single-img').hover(function(event) {
+    console.log("hovering");
+
+  //get source of the image
+    $('.single-img').mouseenter(function(event) {
+      var imgSrc = $(this).find("img").attr("src");
+      $(".showcase-title-hover").html(imgSrc);
+      console.log(imgSrc);
+    });
+
+    //show caption on mouse position
+    $('.single-img').mousemove(function(event) {
+        var x = event.pageX;
+        var y = event.pageY;
+
+        if ($('.single-img').hasClass('img-hide')){
+          console.log("has class image hide");
+          $(".showcase-caption-hover").css({
+              "opacity": "1",
+              "left": x,
+              "top": y
+          });
+        }
+    });
+
+    $('.single-img').mouseleave(function(event) {
+      $(".showcase-caption-hover").css({
+          "opacity": "0"
+      });
+    });
+
+  });
+
+}
+
 function load() {
   var storedValue = JSON.parse(sessionStorage.getItem('store'));
 
   if (storedValue == true) {
     console.log("stored value is true!");
     toggleWireframe();
+    mainHover();
+    singleHover();
 
     wire = true;
     sessionStorage.setItem('store', JSON.stringify(wire));
@@ -70,7 +156,6 @@ x=document.getElementsByClassName("wireframe-button");  // Find the elements
     }
 }
 
-
 //turns on/off wireframe styles
 function wireframeOnOff() {
   //body color
@@ -95,7 +180,7 @@ function wireframeOnOff() {
   $(".main-image").toggleClass('main-img-hide main-img-show');
 };
 
-//dsiplays current font size
+//displays current font size
 function displayFontSize() {
   myWidth = window.innerWidth;
   myHeight = window.innerHeight;
@@ -146,29 +231,32 @@ function toggleWireframe() {
     sessionStorage.setItem('store', JSON.stringify(wire));
     console.log(wire);
 
-    // wireframeOn();
-    // console.log("wireframe turned on");
+    //turn on hovering captions
+    mainHover();
+    singleHover();
+
+
+
   } else if (wire) {
     wire = false;
     sessionStorage.setItem('store', JSON.stringify(wire));
     console.log(wire);
 
-    // wireframeOff();
-    // console.log("wireframe turned off");
+    //unbind mouse hovering captions
+    $('.main-image').unbind('mouseenter mouseleave mousemove');
+    $('.single-img').unbind('mouseenter mouseleave mousemove');
   }
 
   //TEXT CHAHNGES
   if (wire) {
     //button text
     buttonContent();
-    // $('.wireframe-button').html('Content');
     displayFontSize();
     //text changes
     window.onresize = displayFontSize;
   } else {
     //button text
     buttonWire();
-    // $('.wireframe-button').html('Wireframe');
 
     //text changes
     //Mistaek Magazine

@@ -398,6 +398,7 @@ a.to-top:hover {
 .responsive-video {
   padding:56.25% 0 0 0;
   position:relative;
+  transition: all ease 3s;
 }
 
 /* INDEX / MAIN PAGE  */
@@ -466,6 +467,9 @@ p.c:hover {
 
 .main-img-show > img {
   opacity: 1;
+  /* -webkit-transition: 10s opacity;
+  transition: 10s opacity;
+  will-change: opacity; */
   top: 0;
   position: relative;
   box-shadow: none;
@@ -778,6 +782,37 @@ td a:hover {
   .wire-contact-box {
     background-color: #ffffff;
     border-left: 1px solid white;
+  }
+
+  /* MAIN IMAGE WIRE HOVER CAPTION */
+  .showcase-caption-hover {
+      position: absolute;
+      pointer-events: none;
+      z-index: 6000;
+      white-space: pre;
+      min-height: 2em;
+      /* mix-blend-mode: difference; */
+
+      opacity: 0;
+      -webkit-transition: .25s opacity;
+      transition: .25s opacity;
+      will-change: opacity;
+      /* size bigger than the title it contains, for border below */
+      background: transparent;
+      color: black;
+      padding: 1em 1em;
+  }
+
+  .showcase-title-hover {
+    font-family: Suisse Light;
+    font-weight: lighter;
+    font-size: 1em;
+    line-height: 2em;
+    padding: 0 1em 0 1em;
+    margin: 0;
+
+    background-color: white;
+    border: 1px solid black;
   }
 
 /* QUERIES */
