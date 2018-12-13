@@ -11,6 +11,7 @@ body {
   background-color: #ffffff;
   margin: 0;
   overflow: auto;
+  overflow-x: hidden;
   color: #000000;
   height: 100%;
   width: 100%;
@@ -398,7 +399,7 @@ a.to-top:hover {
 .responsive-video {
   padding:56.25% 0 0 0;
   position:relative;
-  transition: all ease 3s;
+  transition: all ease .3s;
 }
 
 /* INDEX / MAIN PAGE  */
@@ -722,10 +723,6 @@ td a:hover {
     opacity: 0;
   }
 
-  .img-hide > iframe {
-    opacity: 0;
-  }
-
   .img-hide {
     /* background-color: #ffffff; */
     background-color: transparent;
@@ -745,6 +742,33 @@ td a:hover {
     background-color: transparent;
     border: none;
     z-index: 1;
+  }
+
+  .vid-hide {
+    background-color: transparent;
+    border: 1px solid black;
+  }
+
+  .vid-hide > iframe {
+    opacity: 0;
+  }
+
+  .vid-hide:last-child {
+    margin-bottom: 1.5em;
+  }
+
+  .vid-show {
+    opacity: 1;
+    background-color: transparent;
+    border: none;
+    z-index: 1;
+    top: 0;
+    transition: all ease .3s;
+  }
+
+  li > .vid-show:hover {
+    top: -3px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
   }
 
   /* SINGLE WORK DOUBLE IMAGE */
