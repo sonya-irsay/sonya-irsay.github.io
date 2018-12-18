@@ -13,34 +13,74 @@ var ipsum ="<br>Class aptent taciti sociosqu ad litora torquent per conubia nost
 
 var smoothX = 0;
 var smoothY = 0;
+
 // function: toggleInfo
 // the div: #info
 // showing class: show
 // the button: infoButton
 // the existing class: contact-box
+
+//lazy image load
 document.addEventListener("DOMContentLoaded", function() {
-  var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
+  var storedValue = JSON.parse(sessionStorage.getItem('store'));
 
-  if ("IntersectionObserver" in window) {
-    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          let lazyImage = entry.target;
-          lazyImage.src = lazyImage.dataset.src;
-          lazyImage.srcset = lazyImage.dataset.srcset;
-          lazyImage.classList.remove("lazy");
-          lazyImageObserver.unobserve(lazyImage);
-        }
-      });
-    });
+  if (storedValue == true) {
+    // console.log("stored value is true!");
+    // console.log(wire);
 
-    lazyImages.forEach(function(lazyImage) {
-      lazyImageObserver.observe(lazyImage);
-    });
-  } else {
-    // Possibly fall back to a more compatible method here
+    toggleWireframe();
+    mainHover();
+    singleHover();
+
+    wire = true;
+    sessionStorage.setItem('store', JSON.stringify(wire));
+
+  } else if (storedValue == false) {
+    // console.log("stored value is false!");
+    // console.log(wire);
+
+    wire = false;
+    sessionStorage.setItem('store', JSON.stringify(wire));
+
+    //load images
+    lazyLoad();
+
+  } else if (!storedValue) {
+    // console.log("there is no stored value");
+    // console.log(wire);
+
+    wire = false;
+    sessionStorage.setItem('store', JSON.stringify(wire));
+
+    //load images
+    lazyLoad();
+
   }
 });
+
+function lazyLoad() {
+  var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
+
+    if ("IntersectionObserver" in window) {
+      let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            let lazyImage = entry.target;
+            lazyImage.src = lazyImage.dataset.src;
+            lazyImage.srcset = lazyImage.dataset.srcset;
+            lazyImage.classList.remove("lazy");
+            lazyImageObserver.unobserve(lazyImage);
+          }
+        });
+      });
+
+      lazyImages.forEach(function(lazyImage) {
+        lazyImageObserver.observe(lazyImage);
+      });
+    } else {
+      // Possibly fall back to a more compatible method here
+    }
+}
 
 function toggleInfo() {
   $("#info").toggleClass("show");
@@ -185,31 +225,7 @@ function vidHover() {
 }
 
 function load() {
-  var storedValue = JSON.parse(sessionStorage.getItem('store'));
 
-  if (storedValue == true) {
-    // console.log("stored value is true!");
-    toggleWireframe();
-    mainHover();
-    singleHover();
-
-    wire = true;
-    sessionStorage.setItem('store', JSON.stringify(wire));
-    // console.log(wire);
-
-  } else if (storedValue == false) {
-    // console.log("stored value is false!");
-    wire = false;
-    sessionStorage.setItem('store', JSON.stringify(wire));
-    // console.log(wire);
-
-  } else if (!storedValue) {
-    // console.log("there is no stored value");
-
-    wire = false;
-    sessionStorage.setItem('store', JSON.stringify(wire));
-    // console.log(wire);
-  }
 }
 
 function buttonContent() {
@@ -363,7 +379,7 @@ function toggleWireframe() {
   if (!wire) {
     wire = true;
     sessionStorage.setItem('store', JSON.stringify(wire));
-    // console.log(wire);
+    console.log(wire);
 
     //turn on hovering captions
     mainHover();
@@ -373,12 +389,15 @@ function toggleWireframe() {
   } else if (wire) {
     wire = false;
     sessionStorage.setItem('store', JSON.stringify(wire));
-    // console.log(wire);
+    console.log(wire);
 
     //unbind mouse hovering captions
     $('.main-image').unbind('mouseenter mouseleave mousemove');
     $('.single-img').unbind('mouseenter mouseleave mousemove');
     $('.vid-hide').unbind('mouseenter mouseleave mousemove');
+
+    //load images
+    lazyLoad();
   }
 
   //TEXT CHAHNGES
