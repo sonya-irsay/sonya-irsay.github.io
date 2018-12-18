@@ -379,7 +379,7 @@ function toggleWireframe() {
   if (!wire) {
     wire = true;
     sessionStorage.setItem('store', JSON.stringify(wire));
-    console.log(wire);
+    // console.log(wire);
 
     //turn on hovering captions
     mainHover();
@@ -389,7 +389,7 @@ function toggleWireframe() {
   } else if (wire) {
     wire = false;
     sessionStorage.setItem('store', JSON.stringify(wire));
-    console.log(wire);
+    // console.log(wire);
 
     //unbind mouse hovering captions
     $('.main-image').unbind('mouseenter mouseleave mousemove');
