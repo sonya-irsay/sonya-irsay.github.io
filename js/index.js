@@ -101,7 +101,7 @@ function mainHover() {
 
     //get source of the image
     $('.main-image').mouseenter(function(event) {
-      var imgSrc = $(this).find("img").attr("src");
+      var imgSrc = $(this).find("img").attr("data-src");
       $(".showcase-title-hover").html(imgSrc);
       // console.log(imgSrc);
     });
@@ -146,7 +146,7 @@ function singleHover() {
 
   //get source of the image
     $('.single-img').mouseenter(function(event) {
-      var imgSrc = $(this).find("img").attr("src");
+      var imgSrc = $(this).find("img").attr("data-src");
       $(".showcase-title-hover").html(imgSrc);
       // console.log(imgSrc);
     });
