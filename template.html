@@ -61,11 +61,11 @@
     <!-- 1 -->
     <div class="work-container">
       <!-- IMAGES 1 -->
-      <!-- class="lazy" src="imgs/placeholders/1200_lazy.jpg" data-src="" data-srcset="" -->
+      <!-- -->
       <div class="work-container-image">
-        <div class="single-img img-show"><img src="imgs/mistaek/1.jpg" alt=""></div>
-        <div class="single-img img-show"><img src="imgs/mistaek/2.jpg" alt=""></div>
-        <div class="single-img img-show"><img src="imgs/mistaek/3.jpg" alt=""></div>
+        <div class="single-img img-show"><img class="lazy" src="imgs/placeholders/1200_lazy.jpg" data-src="imgs/mistaek/1.jpg" data-srcset="imgs/mistaek/1.jpg" alt=""></div>
+        <div class="single-img img-show"><img class="lazy" src="imgs/placeholders/1200_lazy.jpg" data-src="imgs/mistaek/2.jpg" data-srcset="imgs/mistaek/2.jpg" alt=""></div>
+        <div class="single-img img-show"><img class="lazy" src="imgs/placeholders/1200_lazy.jpg" data-src="imgs/mistaek/3.jpg" data-srcset="imgs/mistaek/3.jpg" alt=""></div>
       </div> <!-- work container image -->
 
       <!-- TEXT 1 -->
@@ -83,9 +83,9 @@
     <div class="work-container" style="grid-row-start: 3;">
       <!-- IMAGES 2 -->
       <div class="work-container-image">
-        <div class="single-img img-show"><img src="imgs/mistaek/4.jpg" alt=""></div>
-        <div class="single-img img-show"><img src="imgs/mistaek/5.jpg" alt=""></div>
-        <div class="single-img img-show" style="margin-bottom: 0;"><img src="imgs/mistaek/6.jpg" alt=""></div>
+        <div class="single-img img-show"><img class="lazy" src="imgs/placeholders/1200_lazy.jpg" data-src="imgs/mistaek/4.jpg" data-srcset="imgs/mistaek/4.jpg" alt=""></div>
+        <div class="single-img img-show"><img class="lazy" src="imgs/placeholders/1200_lazy.jpg" data-src="imgs/mistaek/5.jpg" data-srcset="imgs/mistaek/5.jpg" alt=""></div>
+        <div class="single-img img-show" style="margin-bottom: 0;"><img class="lazy" src="imgs/placeholders/1200_lazy.jpg" data-src="imgs/mistaek/6.jpg" data-srcset="imgs/mistaek/6.jpg" alt=""></div>
       </div> <!-- work container image -->
 
       <!-- TEXT 2-->
@@ -298,6 +298,8 @@
     </ul>
   </div>
 
+  <!-- Load the polyfill -->
+  <script src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
   <script src="js/index.js"></script>
 </body>
 
