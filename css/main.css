@@ -4,7 +4,7 @@
 @font-face { font-family: Suisse Light; font-weight: lighter; font-style: italic; src: url('data/suisse-light-italic.woff');}
 
 body {
-  font-family: Suisse Light;
+  font-family: Suisse Light, Sans-Serif;
   font-weight: lighter;
   font-size: 18px;
   line-height: 1.25;
@@ -55,7 +55,7 @@ button:hover {
 /* TYPOGRAPHY */
 /* --------------------------------------------------------------------- */
 h1, h2, h3, h4 {
-  font-family: Suisse Regular;
+  font-family: Suisse Regular, Sans-Serif;
   font-weight: bold;
   color: #000000;
 }
@@ -112,7 +112,7 @@ nav a {
   text-decoration: none;
   font-size: 1em;
   line-height: 5em;
-  font-family: Suisse Regular, sans-serif;
+  font-family: Suisse Regular, Sans-Serif;
   outline: none;
 }
 
@@ -138,7 +138,7 @@ nav button {
   padding: 0 2em;
   font-size: 1em;
   line-height: 5em;
-  font-family: Suisse Regular, sans-serif;
+  font-family: Suisse Regular, Sans-Serif;
   outline: none;
 }
 
@@ -178,7 +178,7 @@ nav button:hover {
   color: black;
   text-align: center;
   text-decoration: none;
-  font-family: Suisse Regular, sans-serif;
+  font-family: Suisse Regular, Sans-Serif;
   outline: none;
 }
 
@@ -197,7 +197,7 @@ nav button:hover {
   display: block;
   color: black;
   text-align: center;
-  font-family: Suisse Regular, sans-serif;
+  font-family: Suisse Regular, Sans-Serif;
   outline: none;
 }
 
@@ -328,7 +328,7 @@ button.to-top {
   text-align: center;
   font-size: 1em;
   line-height: 5em;
-  font-family: Suisse Regular, sans-serif;
+  font-family: Suisse Regular, Sans-Serif;
   outline: none;
 
   padding: 0 2em;
@@ -347,7 +347,7 @@ a.to-top {
   text-decoration: none;
   font-size: 1em;
   line-height: 5em;
-  font-family: Suisse Regular, sans-serif;
+  font-family: Suisse Regular, Sans-Serif;
   outline: none;
 
   padding: 0 2em;
@@ -442,7 +442,7 @@ a.to-top:hover {
   text-decoration: none;
   font-size: 1em;
   line-height: 0;
-  font-family: Suisse Regular, sans-serif;
+  font-family: Suisse Regular, Sans-Serif;
   outline: none;
 }
 
@@ -454,7 +454,7 @@ p.c {
   color: black;
   font-size: 1em;
   line-height: 1.25;
-  font-family: Suisse Regular, sans-serif;
+  font-family: Suisse Regular, Sans-Serif;
   text-align: left;
 
   text-decoration: none;
@@ -538,7 +538,7 @@ p.c:hover {
   text-decoration: none;
   font-size: 1em;
   line-height: 0;
-  font-family: Suisse Regular, sans-serif;
+  font-family: Suisse Regular, Sans-Serif;
   outline: none;
 }
 
@@ -550,7 +550,7 @@ p.d {
   color: black;
   font-size: 1em;
   line-height: 1.25;
-  font-family: Suisse Light, sans-serif;
+  font-family: Suisse Light, Sans-Serif;
   font-weight: lighter;
   text-align: left;
 
@@ -851,7 +851,7 @@ td a:hover {
   }
 
   .showcase-title-hover {
-    font-family: Suisse Light;
+    font-family: Suisse Light, Sans-Serif;
     font-weight: lighter;
     font-size: 1em;
     line-height: 2em;
