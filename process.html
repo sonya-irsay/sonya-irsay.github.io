@@ -10,6 +10,7 @@
   <!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
   <link rel="stylesheet" type="text/css" href="css/main.css">
   <link href="css/pace_minimal.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <script src="js/jquery.min.js"></script>
   <script src="js/pace.js"></script>
 
@@ -60,7 +61,7 @@
     <!-- 1 -->
     <div class="work-container">
       <!-- IMAGES 1 -->
-      <div class="work-container-image">
+      <div class="work-container-image" data-aos="fade-in">
         <div class="single-img img-show"><img class="lazy" src="imgs/placeholders/1200_lazy.jpg" data-src="imgs/sketchbook/1b.jpg" data-srcset="imgs/sketchbook/1b.jpg" alt="thick sketchbook"></div>
         <div class="single-img img-show"><img class="lazy" src="imgs/placeholders/907_lazy.jpg" data-src="imgs/sketchbook/1.jpg" data-srcset="imgs/sketchbook/1.jpg" alt="sketchbook spread"></div>
         <div class="single-img img-show"><img class="lazy" src="imgs/placeholders/907_lazy.jpg" data-src="imgs/sketchbook/2.jpg" data-srcset="imgs/sketchbook/2.jpg" alt="sketchbook spread"></div>
@@ -85,7 +86,7 @@
       </div> <!-- work container image -->
 
       <!-- TEXT 1 -->
-      <div class="work-container-text">
+      <div class="work-container-text" data-aos="fade-in">
         <h4 id="process">Process</h4>
         <p id="process-det" class="b">Mixed Media.</p>
         <p id="process-des-1">Selected pages from sketchbooks.</p>
@@ -292,6 +293,12 @@
   <!-- Load the polyfill -->
   <script src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
   <script src="js/index.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true,
+    });
+  </script>
 </body>
 
 </html>

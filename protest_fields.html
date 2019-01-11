@@ -10,6 +10,7 @@
   <!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
   <link rel="stylesheet" type="text/css" href="css/main.css">
   <link href="css/pace_minimal.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <script src="js/jquery.min.js"></script>
   <script src="js/pace.js"></script>
 
@@ -60,14 +61,14 @@
     <!-- 1 -->
     <div class="work-container">
       <!-- IMAGES 1 -->
-      <div class="work-container-image">
+      <div class="work-container-image" data-aos="fade-in">
         <div class="single-img img-show"><img class="lazy" src="imgs/placeholders/1200_lazy.jpg" data-src="imgs/protest_field/1.jpg" data-srcset="imgs/protest_field/1.jpg" alt="wood house structure with metal roof in courtyard"></div>
         <div class="single-img img-show"><img class="lazy" src="imgs/placeholders/1200_lazy.jpg" data-src="imgs/protest_field/2.jpg" data-srcset="imgs/protest_field/2.jpg" alt="people discussing wood structure"></div>
         <div class="single-img img-show"><img class="lazy" src="imgs/placeholders/1200_lazy.jpg" data-src="imgs/protest_field/3b.jpg" data-srcset="imgs/protest_field/3b.jpg" alt="brick with black text"></div>
       </div> <!-- work container image -->
 
       <!-- TEXT 1 -->
-      <div class="work-container-text">
+      <div class="work-container-text" data-aos="fade-in">
         <h4 id="protest">Protest Fields: Mona Bismarck</h4>
         <p id="protest-det" class="b">Wood, corrugated metal roof, construction lighting.</p>
         <p id="protest-des">A plot of land divided into lots and populated with generic, repeating boxes is a familiar product of contemporary built space. The landscape of Crimea, Ukraine is replete with such spaces – grass fields dotted with standardized limestone huts arranged in a rough but consistent grid. They are called protest fields. They result from a practice of unauthorized occupation of land in the Crimean territory, as a reaction to historically consistent acts of violence. They are a form of resistance, a practice of inscribing protest onto a landscape, a way of laying claim to a home and a homeland. A protest hut is built as a placeholder, occupying a space for a permanent home. Its emptiness stands as a monument to displacement and the hope for a future completeness.</p>
@@ -77,13 +78,13 @@
     <!-- 2 -->
     <div class="work-container" style="grid-row-start: 3;">
       <!-- IMAGES 2 -->
-      <div class="work-container-image">
+      <div class="work-container-image" data-aos="fade-in">
         <div class="single-img img-show"><img class="lazy" src="imgs/placeholders/1200_lazy.jpg" data-src="imgs/protest_field/3.jpg" data-srcset="imgs/protest_field/3.jpg" alt="wood house structure in courtyard"></div>
         <div class="single-img img-show" style="margin-bottom: 0;"><img class="lazy" src="imgs/placeholders/1200_lazy.jpg" data-src="imgs/protest_field/3a.jpg" data-srcset="imgs/protest_field/3a.jpg" alt="wood house structure in empty courtyard"></div>
       </div> <!-- work container image -->
 
       <!-- TEXT 2-->
-      <div class="work-container-text">
+      <div class="work-container-text" data-aos="fade-in">
         <p id="protest-det-2" class="b">Exhibited at the Mona Bismarck American Center, Nuit Européene des Musées. Exhibition shots by Vinciane Lebrun/Voyez-Vous and Julien Mouffron-Gardner.</p>
         <p id="protest-dis" class="b">Installation, Exhibition, Research
         </p>
@@ -290,6 +291,12 @@
   <!-- Load the polyfill -->
   <script src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
   <script src="js/index.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true,
+    });
+  </script>
 </body>
 
 </html>

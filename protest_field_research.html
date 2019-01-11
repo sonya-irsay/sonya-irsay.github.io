@@ -10,6 +10,7 @@
   <!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
   <link rel="stylesheet" type="text/css" href="css/main.css">
   <link href="css/pace_minimal.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <script src="js/jquery.min.js"></script>
   <script src="js/pace.js"></script>
 
@@ -60,14 +61,14 @@
     <!-- 1 -->
     <div class="work-container">
       <!-- IMAGES 1 -->
-      <div class="work-container-image">
+      <div class="work-container-image" data-aos="fade-in">
         <div class="single-img img-show"><img class="lazy" src="imgs/placeholders/1200_lazy.jpg" data-src="imgs/thesis_book/3.jpg" data-srcset="imgs/thesis_book/3.jpg" alt="book launch exhibition view"></div>
         <div class="single-img img-show"><img class="lazy" src="imgs/placeholders/1200_lazy.jpg" data-src="imgs/thesis_book/10.jpg" data-srcset="imgs/thesis_book/10.jpg" alt="books on brick plinth"></div>
         <div class="single-img img-show"><img class="lazy" src="imgs/placeholders/1200_lazy.jpg" data-src="imgs/thesis_book/4.jpg" data-srcset="imgs/thesis_book/4.jpg" alt="book spread featuring abstract"></div>
       </div> <!-- work container image -->
 
       <!-- TEXT 1 -->
-      <div class="work-container-text">
+      <div class="work-container-text" data-aos="fade-in">
         <h4 id="research">Protest Fields: Book</h4>
         <p id="research-det" class="b">Perfect bound, 80g recycled stock and sandpaper cover. 3 copies make up the size of a standard brick.</p>
         <p id="research-des-1">The book investigates the practice of illegal claiming of land in Crimea, Ukraine known as building Protest Fields.
@@ -78,7 +79,7 @@ As exhibited at the Mona Bismarck Center, La Nuit Européene des Musées.</p>
     <!-- 2 -->
     <div class="work-container" style="grid-row-start: 3;">
       <!-- IMAGES 2 -->
-      <div class="work-container-image">
+      <div class="work-container-image" data-aos="fade-in">
         <div class="single-img img-show"><img class="lazy" src="imgs/placeholders/1200_lazy.jpg" data-src="imgs/thesis_book/8.jpg" data-srcset="imgs/thesis_book/8.jpg" alt="book spread"></div>
         <div class="single-img img-show"><img class="lazy" src="imgs/placeholders/1200_lazy.jpg" data-src="imgs/thesis_book/9.jpg" data-srcset="imgs/thesis_book/9.jpg" alt="book spread"></div>
         <div class="single-img img-show"><img class="lazy" src="imgs/placeholders/1200_lazy.jpg" data-src="imgs/thesis_book/5.jpg" data-srcset="imgs/thesis_book/5.jpg" alt="book spread"></div>
@@ -88,7 +89,7 @@ As exhibited at the Mona Bismarck Center, La Nuit Européene des Musées.</p>
       </div> <!-- work container image -->
 
       <!-- TEXT 2-->
-      <div class="work-container-text">
+      <div class="work-container-text" data-aos="fade-in">
         <p id="research-des-2">A plot of land divided into lots and populated with generic, repeating boxes
           is a familiar product of contemporary built space. The landscape of Crimea, Ukraine is replete with
           such spaces – grass fields dotted with standardized limestone huts arranged in a rough but consistent
@@ -303,6 +304,12 @@ As exhibited at the Mona Bismarck Center, La Nuit Européene des Musées.</p>
   <!-- Load the polyfill -->
   <script src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
   <script src="js/index.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true,
+    });
+  </script>
 </body>
 
 </html>

@@ -10,6 +10,7 @@
   <!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
   <link rel="stylesheet" type="text/css" href="css/main.css">
   <link href="css/pace_minimal.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <script src="js/jquery.min.js"></script>
   <script src="js/pace.js"></script>
 
@@ -65,7 +66,7 @@
       </div> <!-- work container image -->
 
       <!-- TEXT 1 -->
-      <div class="work-container-text">
+      <div class="work-container-text" data-aos="fade-in">
         <h4 id="augment">Augment Monument</h4>
         <p id="augment-det" class="b">AR App. Unity, C#, ARKit</p>
         <p id="augment-des-1">Can't remember the names of all the white men glorified in public spaces?
@@ -269,10 +270,16 @@ Meet Augment Monument - an AR tool conceived to anonymize something that is mean
       <li><button class="nav-bottom-shift wireframe-button" onclick="toggleWireframe()">Wireframe</button></li>
     </ul>
   </div>
-  
+
   <!-- Load the polyfill -->
   <script src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
   <script src="js/index.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true,
+    });
+  </script>
 </body>
 
 </html>

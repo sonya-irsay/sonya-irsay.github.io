@@ -10,6 +10,7 @@
   <!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
   <link rel="stylesheet" type="text/css" href="css/main.css">
   <link href="css/pace_minimal.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <script src="js/jquery.min.js"></script>
   <script src="js/pace.js"></script>
 
@@ -60,14 +61,14 @@
     <!-- 1 -->
     <div class="work-container">
       <!-- IMAGES 1 -->
-      <div class="work-container-image">
+      <div class="work-container-image" data-aos="fade-in">
         <div class="single-img img-show"><img class="lazy" src="imgs/placeholders/1200_lazy.jpg" data-src="imgs/refrag/3.jpg" data-srcset="imgs/refrag/3.jpg" alt="website screenshot"></div>
         <div class="single-img img-show"><img class="lazy" src="imgs/placeholders/1200_lazy.jpg" data-src="imgs/refrag/4.jpg" data-srcset="imgs/refrag/4.jpg" alt="website screenshot"></div>
         <div class="single-img img-show" style="margin-bottom: 0;"><img class="lazy" src="imgs/placeholders/1200_lazy.jpg" data-src="imgs/refrag/5.jpg" data-srcset="imgs/refrag/5.jpg" alt="website screenshot"></div>
       </div> <!-- work container image -->
 
       <!-- TEXT 1 -->
-      <div class="work-container-text">
+      <div class="work-container-text" data-aos="fade-in">
         <h4 id="refrag">Refrag Website</h4>
         <p id="refrag-det" class="b">HTML, CSS, JavaScript.</p>
         <p id="refrag-des-1">Website re-design and development for the fourth edition of Refrag, an annual symposium exploring new connections between art, culture and technology in Paris, France.
@@ -280,6 +281,12 @@
   <!-- Load the polyfill -->
   <script src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
   <script src="js/index.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true,
+    });
+  </script>
 </body>
 
 </html>

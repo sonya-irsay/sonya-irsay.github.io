@@ -10,6 +10,7 @@
   <!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
   <link rel="stylesheet" type="text/css" href="css/main.css">
   <link href="css/pace_minimal.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <script src="js/jquery.min.js"></script>
   <script src="js/pace.js"></script>
 
@@ -60,14 +61,14 @@
     <!-- 1 -->
     <div class="work-container">
       <!-- IMAGES 1 -->
-      <div class="work-container-image">
+      <div class="work-container-image" data-aos="fade-in">
         <div class="single-img img-show"><img class="lazy" src="imgs/placeholders/1200_lazy.jpg" data-src="imgs/natura_rerum/1.jpg" data-srcset="imgs/natura_rerum/1.jpg" alt="packaged books"></div>
         <div class="single-img img-show"><img class="lazy" src="imgs/placeholders/1200_lazy.jpg" data-src="imgs/natura_rerum/8.jpg" data-srcset="imgs/natura_rerum/8.jpg" alt="book with tracing paper cover and rubber bind"></div>
         <div class="single-img img-show"><img class="lazy" src="imgs/placeholders/1200_lazy.jpg" data-src="imgs/natura_rerum/2.jpg" data-srcset="imgs/natura_rerum/2.jpg" alt="book spread"></div>
       </div> <!-- work container image -->
 
       <!-- TEXT 1 -->
-      <div class="work-container-text">
+      <div class="work-container-text" data-aos="fade-in">
         <h4 id="natura">De Natura Rerum</h4>
         <p id="natura-det" class="b">80 pages, Risograph print (3 colors) on white and fluo green stock, edition of 200.</p>
         <p id="natura-des-1">Collaborative edition of Lucretius’ De Natura Rerum produced as part of You Are Here exhibition during the COP21 conference in Paris, France. The text was illustrated using only scanned images from found secondhand books.
@@ -78,7 +79,7 @@
     <!-- 2 -->
     <div class="work-container" style="grid-row-start: 3;">
       <!-- IMAGES 2 -->
-      <div class="work-container-image">
+      <div class="work-container-image" data-aos="fade-in">
         <div class="single-img img-show"><img class="lazy" src="imgs/placeholders/1200_lazy.jpg" data-src="imgs/natura_rerum/6.jpg" data-srcset="imgs/natura_rerum/6.jpg" alt="book spread"></div>
         <div class="single-img img-show"><img class="lazy" src="imgs/placeholders/1200_lazy.jpg" data-src="imgs/natura_rerum/7.jpg" data-srcset="imgs/natura_rerum/7.jpg" alt="book spread"></div>
         <div class="single-img img-show"><img class="lazy" src="imgs/placeholders/1200_lazy.jpg" data-src="imgs/natura_rerum/9.jpg" data-srcset="imgs/natura_rerum/9.jpg" alt="book spread"></div>
@@ -86,7 +87,7 @@
       </div> <!-- work container image -->
 
       <!-- TEXT 2-->
-      <div class="work-container-text">
+      <div class="work-container-text" data-aos="fade-in">
         <p id="natura-des-2">Project led by Aurélien Farina of <a href="http://papertiger.fr" target="_blank">Paper! Tiger!</a> </p>
         <p id="natura-dis" class="b">Graphic, Editorial, Print
         </p>
@@ -293,6 +294,12 @@
   <!-- Load the polyfill -->
   <script src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
   <script src="js/index.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true,
+    });
+  </script>
 </body>
 
 </html>
