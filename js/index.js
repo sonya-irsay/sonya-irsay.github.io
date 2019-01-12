@@ -369,6 +369,9 @@ function displayFontSize() {
     $('#feed-7').html(titleFeed + " " + sInsert +"px");
     $('#feed-8').html(titleFeed + " " + sInsert +"px");
     $('#feed-9').html(titleFeed + " " + sInsert +"px");
+    $('#feed-10').html(titleFeed + " " + sInsert +"px");
+    $('#feed-11').html(titleFeed + " " + sInsert +"px");
+    $('#feed-12').html(titleFeed + " " + sInsert +"px");
   }
 };
 
@@ -511,6 +514,9 @@ function toggleWireframe() {
     $('#feed-7').html('Silkscreen poster, 33 x 45 cm, edition of 20, 7 colors, on white, gray and cream Arches paper.');
     $('#feed-8').html('Preliminary sketch for "of the river, of the forest.');
     $('#feed-9').html('3D meshes reacting to sound, coded in C++ with OpenFrameworks.');
+    $('#feed-10').html('3D assets and looping animation for Print + Sign.');
+    $('#feed-11').html('3D assets and looping animation for Print + Sign.');
+    $('#feed-12').html('Business Cards for Luminar, an interiors studio in Toronto.');
   }
 
   // console.log("wire toggled");
