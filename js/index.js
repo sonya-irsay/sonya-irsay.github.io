@@ -304,6 +304,7 @@ function displayFontSize() {
     $('#research-des-2').html(description + " " + sInsert +"px" + ipsum);
     $('#research-det-2').html(details + " " + sInsert +"px");
     $('#research-dis').html(disciplines + " " + sInsert + "px");
+    $('#research-det-3').html(details + " " + sInsert +"px");
 
     //Refrag
     $('#refrag').html(title + " " + sInsert +"px");
@@ -353,6 +354,7 @@ function displayFontSize() {
     $('#protest-des').html(description + " " + sInsert +"px" + lorem);
     $('#protest-det-2').html(details + " " + sInsert +"px");
     $('#protest-dis').html(disciplines + " " + sInsert + "px");
+    $('#protest-des-2').html(description + " " + sInsert +"px");
 
     //Process
     $('#process').html(title + " " + sInsert +"px");
@@ -445,6 +447,7 @@ function toggleWireframe() {
       ' Its emptiness stands as a monument to displacement and the hope for a future completeness.');
     $('#research-det-2').html('Exhibition photos by Vinciane Lebrun/Voyez-Vous and Julien Mouffron-Gardner.');
     $('#research-dis').html('Print, Editorial, Research');
+    $('#research-det-3').html('<a href="http://protestfield.com" target="_blank">www.protestfield.com</a>');
 
     //Refrag
     $('#refrag').html('Refrag Website');
@@ -498,6 +501,7 @@ function toggleWireframe() {
     ' occupying a space for a permanent home. Its emptiness stands as a monument to displacement and the hope for a future completeness.');
     $('#protest-det-2').html('Exhibited at the Mona Bismarck American Center, Nuit Européene des Musées. Exhibition shots by Vinciane Lebrun/Voyez-Vous and Julien Mouffron-Gardner.');
     $('#protest-dis').html('Installation, Exhibition, Research');
+    $('#protest-des-2').html('<a href="http://protestfield.com" target="_blank">www.protestfield.com</a>');
 
     //Process
     $('#process').html('Process');
