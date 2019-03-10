@@ -5,4 +5,4 @@ Disallow: /imgs/placeholders/
 User-agent: *
 Disallow: /imgs/thumbnails/lazy.jpg
 Disallow: /imgs/placeholders/
-Disallow: template.html
+Disallow: /template.html
