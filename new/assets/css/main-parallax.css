@@ -1,0 +1,164 @@
+@font-face {
+  font-family: Suisse;
+  src: url('../fonts/suisse-regular.woff');
+  /* To do: add other formats */
+  font-style: normal;
+}
+
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Suisse, sans-serif;
+  font-weight: 100;
+  font-size: 20px;
+}
+
+body {
+  margin: 1rem 1rem 1rem 1rem;
+  background-color: #fff;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Typography */
+/* ------------------------------------------------------------------ */
+
+p, a, span, h1, h2, h3 {
+  font-family: Suisse, sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 1rem;
+  color: #000;
+  margin: 0;
+  line-height: normal;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  /* border-bottom-style: solid;
+  border-bottom-width: 1px; */
+}
+
+a:active {
+
+}
+
+::selection {
+
+}
+
+/* Nav */
+/* ------------------------------------------------------------------ */
+.nav {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+}
+
+.nav a, .nav span {
+  z-index: 1000;
+}
+
+.info a {
+  display: inline;
+}
+
+/* Images */
+/* ------------------------------------------------------------------ */
+
+.slide-container {
+  width: 100%;
+  height: calc(100vh - 2rem);
+}
+
+.slide-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.slide-wrapper img {
+  height: auto;
+  width: 60%;
+  display: inline-block;
+
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 5%;
+}
+
+img.vertical {
+  height: auto;
+  width: 30%;
+  margin-left: 35%;
+  margin-right: 35%;
+  margin-top: 3%;
+}
+
+.slide-wrapper > p {
+  display: none;
+}
+
+.coords {
+  color: #000;
+  position: fixed;
+  font-size: 1rem;
+  line-height: 1rem;
+  z-index: 50;
+  pointer-events: none;
+  opacity: 1;
+}
+
+.footer {
+  width: 100%;
+  margin: 1rem 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Media Quieries */
+/* ------------------------------------------------------------------ */
+@media screen and (max-width: 768px) {
+  .slide-wrapper img {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 50%;
+  }
+
+  img.vertical {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 20%;
+  }
+
+}
